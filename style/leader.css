@@ -3,13 +3,46 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #E5E5E5;
+    margin: 0;
 }
+/* this is manu style */
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #6520e6;
+    width: 100%;
+    color: #fff;
+    padding-top: 20px;
+    
+}
+.head-side1 img{
+    width: 10%;
+    height: 70%;
+}
+.head-side2 img{
+    width: 50px;
+    height: 50px;
+}
+.head-side1{
+    display: flex;
+    gap: 20px;
+}
+.head-side2{
+    display: flex;
 
-
+}
+.head-side2 ul{
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    position: relative;
+    right: 200px;
 }
 .container{
     background-color: #fff;
@@ -120,3 +153,53 @@ right: 60px;
 width: 80%;
 color: #2a2b2aec;
 }
+/* media QUARYS */
+
+/* _____________________ */
+
+/* Mobile devise */
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .players , .blogs ,.courses{
+        grid-template-columns:repeat(1,1fr);
+    }
+    .player , .blog{
+        flex-direction: column;
+    }
+    .section-title{
+        position: relative;
+        left: 31% ;
+    }
+    .blog{
+        margin-left: 40px;
+    }
+.course{
+    margin-left:24%;
+}
+.head-side2 ul{
+position: relative;
+gap: 20px;
+left: 0%;
+left: -120px;
+}
+}
+/* tablrte devises */
+@media only screen and (min-width:688px)and (max-width:992px){
+    .container {
+            width: 100%;        }
+    .players,.courses{
+                grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .courses{
+        grid-row-gap: 50px;
+    }
+    .course-info{
+        justify-content: space-around;
+    }
+}
+    
